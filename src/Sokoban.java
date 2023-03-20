@@ -32,14 +32,17 @@ import java.io.InputStream;
 public class Sokoban {
 	public static void main(String[] args) {
 		InputStream in;
-		in = Configuration.ouvre("Niveaux/Original.txt");
+		if (args.length > 0)
+			in = Configuration.ouvre("Niveaux/" + args[0] + ".txt");
+		else
+			in = Configuration.ouvre("Niveaux/Original.txt");
 		Configuration.info("Niveaux trouvés");
 
 		LecteurNiveaux l = new LecteurNiveaux(in);
 		Jeu j = new Jeu(l);
 		int num = 1;
-		if (args.length > 0)
-			num = Integer.parseInt(args[0]);
+		if (args.length > 1)
+			num = Integer.parseInt(args[1]);
 		Configuration.info("Affichage du Niveau " + num);
 		while (num != 0) {
 			if (!j.prochainNiveau()) {
