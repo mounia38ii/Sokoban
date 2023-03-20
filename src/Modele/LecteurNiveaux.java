@@ -26,6 +26,8 @@ package Modele;
  *          38401 Saint Martin d'Hères
  */
 
+import sun.util.resources.hr.CalendarData_hr;
+
 import java.io.InputStream;
 import java.util.Scanner;
 
@@ -43,27 +45,33 @@ public class LecteurNiveaux {
 			ligne = s.nextLine();
 			// Nettoyage des séparateurs de fin et commentaires
 			int i;
+			char c = ' ';
 			int dernier = -1;
 			boolean commentaire = false;
+			boolean niveau = false;
 			for (i = 0; (i < ligne.length()) && !commentaire; i++) {
-				char c = ligne.charAt(i);
-				if (!Character.isWhitespace(c) && (c != ';')) {
+				c = ligne.charAt(i);
+				if (c == '#') {
+					niveau = true;
 					dernier = i;
 				}
-				if (c == ';') {
+				if (!niveau && !Character.isWhitespace(c)) {
 					commentaire = true;
 				}
 			}
 			// Un commentaire non vide sera pris comme nom de niveau
 			// -> le dernier commentaire non vide sera le nom final
 			if (commentaire) {
-				char c = ' ';
-				while (Character.isWhitespace(c) && (i < ligne.length())) {
-					c = ligne.charAt(i);
-					if (!Character.isWhitespace(c))
-						n.fixeNom(ligne.substring(i));
-					i++;
+				// Si le premier caractère est un ; on le saute ainsi que les espaces après
+				if (c == ';') {
+					c = ' ';
+					while (Character.isWhitespace(c) && (i<ligne.length())) {
+						c = ligne.charAt(i);
+						i++;
+					}
 				}
+				if (!Character.isWhitespace(c))
+					n.fixeNom(ligne.substring(i-1));
 			}
 			return ligne.substring(0, dernier + 1);
 		} else {
