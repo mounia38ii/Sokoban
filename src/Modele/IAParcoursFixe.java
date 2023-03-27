@@ -29,8 +29,6 @@ package Modele;
 import Global.Configuration;
 import Structures.Sequence;
 
-import java.util.Random;
-
 class IAParcoursFixe extends IA {
 	final static int ROUGE = 0xCC0000;
 	boolean retour;

@@ -29,8 +29,6 @@ package Modele;
 import Global.Configuration;
 import Structures.Sequence;
 
-import java.util.logging.Logger;
-
 public abstract class IA {
 	private Jeu jeu;
 	Niveau niveau;

@@ -27,7 +27,9 @@ package Controleur;
  */
 
 import Global.Configuration;
-import Modele.*;
+import Modele.Coup;
+import Modele.IA;
+import Modele.Jeu;
 import Structures.Iterateur;
 import Structures.Sequence;
 import Vue.CollecteurEvenements;
