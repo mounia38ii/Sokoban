@@ -28,7 +28,6 @@ package Controleur;
 
 import Modele.Coup;
 import Modele.Mouvement;
-import Structures.Iterateur;
 
 public class AnimationCoup extends Animation {
 	double vitesse;
