@@ -26,10 +26,6 @@ package Structures;
  *          38401 Saint Martin d'Hères
  */
 
-import Structures.FAP;
-import Structures.FAPListe;
-import Structures.FAPTableau;
-
 import java.util.Random;
 
 public class TestFAP {

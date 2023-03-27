@@ -26,11 +26,6 @@ package Structures;
  *          38401 Saint Martin d'Hères
  */
 
-import Structures.Iterateur;
-import Structures.Sequence;
-import Structures.SequenceListe;
-import Structures.SequenceTableau;
-
 import java.util.Random;
 
 public class TestSequence {
@@ -113,7 +108,7 @@ public class TestSequence {
 					max++;
 			} else {
 				if (count > 0) {
-					if ((code == 3) || ((code == 2) && (pos == 0)))
+					if ((code == 3) || (pos == 0))
 						min = r1;
 					if ((code == 2) && (pos == count - 1))
 						max = r1;
