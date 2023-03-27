@@ -26,8 +26,6 @@ package Modele;
  *          38401 Saint Martin d'Hères
  */
 
-import Modele.Niveau;
-
 import java.io.OutputStream;
 import java.io.PrintStream;
 
