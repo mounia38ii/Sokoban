@@ -27,7 +27,6 @@ package Modele;
  */
 
 import Global.Configuration;
-import Structures.Sequence;
 
 public class Coup {
 	Mouvement pousseur, caisse;

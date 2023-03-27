@@ -26,8 +26,6 @@ package Modele;
  *          38401 Saint Martin d'Hères
  */
 
-import sun.util.resources.hr.CalendarData_hr;
-
 import java.io.InputStream;
 import java.util.Scanner;
 
