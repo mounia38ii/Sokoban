@@ -26,8 +26,6 @@ package Structures;
  *          38401 Saint Martin d'Hères
  */
 
-import Structures.Iterateur;
-
 public interface Sequence<E> {
 	void insereQueue(E element);
 
