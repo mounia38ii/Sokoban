@@ -25,6 +25,8 @@
  *          38401 Saint Martin d'Hères
  */
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import Global.Configuration;
 
 import java.io.InputStream;
