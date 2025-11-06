@@ -27,6 +27,9 @@
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
+import Modele.Niveau;
+
 import java.awt.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -37,6 +40,7 @@ class AireDeDessin extends JComponent {
 	int counter;
 	Image img;
 	Point position;
+	Niveau niveau;
 
 	public AireDeDessin() {
 		try {
@@ -72,7 +76,6 @@ class AireDeDessin extends JComponent {
 		// Si la position n'est pas fixée, on calcule le centre de la zone et un rayon
 		if (position == null)
 			position = new Point(width/2, height/2);
-
 		// On efface tout
 		drawable.clearRect(0, 0, width, height);
 

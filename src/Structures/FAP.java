@@ -27,9 +27,9 @@ package Structures;
  */
 
 public abstract class FAP<E extends Comparable<E>> {
-	Sequence<E> s;
+	public Sequence<E> s;
 
-	abstract void insere(E element);
+	public abstract void insere(E element);
 
 	public E extrait() {
 		return s.extraitTete();

@@ -85,6 +85,7 @@ public class LecteurNiveaux {
 			if (ligne == null)
 				return null;
 		}
+	
 		int i = 0;
 		while ((ligne != null) && (ligne.length() > 0)) {
 			for (int j = 0; j < ligne.length(); j++) {
